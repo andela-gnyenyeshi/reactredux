@@ -5,4 +5,4 @@ const rootReducer = combineReducers({
   courses
 });
 
-export default rootReducer; 
+export default rootReducer;
