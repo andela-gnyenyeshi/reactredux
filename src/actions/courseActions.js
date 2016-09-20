@@ -1,11 +1,10 @@
 import * as types from './actionTypes';
 import courseApi from '../api/mockCourseApi';
 
-export function createCourse(course) {
-   debugger;
+function loadCoursesSuccess(courses) {
    return {
-     type: types.CREATE_COURSE,
-     course
+     type: types.LOAD_COURSES_SUCCESS,
+     courses
    };
  }
 
@@ -14,7 +13,7 @@ export function loadCourses() {
     return courseApi.getAllCourses().then(courses => {
       dispatch(loadCoursesSuccess(courses));
     }).catch(error => {
-      throw(error); 
+      throw(error);
     });
   };
 }
