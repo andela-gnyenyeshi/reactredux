@@ -60,6 +60,7 @@ CoursesPage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
+  console.log('Consumer Page state', state);
   return {
      courses: state.courses
   };
