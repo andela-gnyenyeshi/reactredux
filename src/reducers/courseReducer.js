@@ -1,5 +1,6 @@
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
+let a;
 
 export default function courseReducer(state = initialState.courses, action) {
   console.log(state, 'Course Reducer');
@@ -8,7 +9,7 @@ export default function courseReducer(state = initialState.courses, action) {
        return action.courses;
 
     case types.UPDATE_COURSE_SUCCESS:
-      return [...state.filter(course => course.id !== action.course.id)];
+      return [...state.filter(course => course.id !== action.course.id), Object.assign({}, action.course)];
 
     case types.CREATE_COURSE_SUCCESS:
       return [...state, Object.assign({}, action.course)];

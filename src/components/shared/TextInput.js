@@ -6,7 +6,6 @@ const TextInput = ({name, label, onChange, placeholder, value, error}) => {
     wrapperClass += " " + "has-error";
   }
 
-  console.log('WOOOI', name);
   return (
     <div className={wrapperClass}>
       <label htmlFor={name}>{label}</label>
