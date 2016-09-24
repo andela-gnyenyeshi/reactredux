@@ -7,7 +7,7 @@ import color from 'colors';
 
 /* eslint-disable no-console */
 
-const port = 1337;
+const port = 3000;
 const app = express();
 const compiler = webpack(config);
 

@@ -8,14 +8,14 @@ function loadCoursesSuccess(courses) {
    };
  }
 
-function updateCourseSuccess(course) {
+function createCourseSuccess(course) {
   return {
     type: types.CREATE_COURSE_SUCCESS,
     course
   };
 }
 
-function createCourseSuccess(course) {
+function updateCourseSuccess(course) {
   return {
     type: types.UPDATE_COURSE_SUCCESS,
     course
