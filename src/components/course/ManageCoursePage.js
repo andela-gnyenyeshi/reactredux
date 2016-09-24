@@ -19,7 +19,6 @@ class ManageCoursePage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('Prooops change', nextProps)
     if (this.props.course.id !== nextProps.course.id) {
       this.setState({
         course: Object.assign({}, nextProps.course)
@@ -73,7 +72,6 @@ class ManageCoursePage extends React.Component {
   }
 
   function mapStateToProps (state, ownProps) {
-    console.log('STAAAAATE', state);
     const courseId = ownProps.params.id;
 
     const authorsFormattedForDropdown = state.authors.map(author => {
