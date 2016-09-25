@@ -72,6 +72,7 @@ class ManageCoursePage extends React.Component {
   }
 
   function mapStateToProps (state, ownProps) {
+    console.log('Manage course states', state);
     const courseId = ownProps.params.id;
 
     const authorsFormattedForDropdown = state.authors.map(author => {

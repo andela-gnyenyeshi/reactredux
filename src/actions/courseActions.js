@@ -27,6 +27,8 @@ export function loadCourses() {
   return dispatch => {
     return courseApi.getAllCourses().then(courses => {
       dispatch(loadCoursesSuccess(courses));
+      console.log('Resolveeed')
+      return 4;
     }).catch(error => {
       throw(error);
     });

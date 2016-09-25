@@ -1,6 +1,5 @@
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
-let a;
 
 export default function courseReducer(state = initialState.courses, action) {
   console.log(state, 'Course Reducer');

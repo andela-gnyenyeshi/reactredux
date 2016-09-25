@@ -9,7 +9,8 @@ import {loadCourses} from './actions/courseActions';
 import {loadAuthors} from './actions/authorActions';
 
 const store = configureStore();
-store.dispatch(loadCourses());
+
+store.dispatch(loadCourses()).then((data) => {console.log('FINISHED', data)});
 store.dispatch(loadAuthors());
 
 render(
